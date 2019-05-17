@@ -1,0 +1,45 @@
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <div id="chart_div"></div>
+   <script>
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+          
+      var data = google.visualization.arrayToDataTable([
+        ['Month', 'Visitations' ],
+        ['Jan', 97],
+         ['Feb', 84],
+          ['Mar', 70],
+           ['Apr', 67],
+            ['May', 67],
+             ['Jun', 53],
+              ['Jul', 50],
+               ['Aug', 52],
+                ['Sep', 52],
+                 ['Oct', 46],
+                  ['Nov', 42],
+                   ['Dec', 42],
+                   
+          
+      ]);
+     
+
+      var options = {
+        title: 'ราคายางแผ่นดิบท้องถิ่นรายเดือนของไทย ปี2560',
+        legend: { position: 'none' },
+        width: 800,
+        hAxis: {
+          title: 'เดือน'
+         },
+        vAxis: {
+          title: 'ยางแผ่นดิบท้องดิบท้องถิ่น'
+        }
+      };
+
+      var chart = new google.visualization.ColumnChart(
+        document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+    </script>
