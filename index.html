@@ -137,16 +137,31 @@ google.charts.load('current', {
       function drawVisualization() {
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
-               ['Country','2560','ref'],
-          ['  China',  3.8632,0],
- ['India'		,0.0335,0],
- ['America'		,-0.068,0],
-  ['Thailand'		,-0.3501,0],
- [' Japan',-0.323,0],
-  ['Indonesia'	,-0.4167,0],
- ['Malaysia'	,-0.5138,0],
- ['Brazil'		,-0.5724,0],
- ['Korea'	,-0.6187,0],
+                       ['Country','2560','ref'],
+          ['  China',  245,0],
+ ['India',39,0],
+ ['America',8759,0],
+  ['Thailand',516,0],
+ [' Japan',6128,0],
+  ['Indonesia',272,0],
+ ['Malaysia',24,0],
+ ['Brazil',15,0],
+ ['Korea',30,0],
+ [' Germany',107,0],
+ ['  Vietnam',1965,0],
+ ['Turkey',-1393,0],
+ ['Italy',24,0],
+ ['Sri Lanka',-13,0],
+// ['ประเทศอื่น ๆ'	,-0.858,0],
+
+        ]);
+        var options = {
+          title : 'ปริมาณการใช้ยางประเทศต่างๆ',
+          vAxis: {title: 'ปี'},
+          hAxis: {title: 'ประเทศ'},
+          seriesType: 'bars',
+          series: {1: {type: 'line'}}
+        };
  [' Germany'		,-0.7744,0],
  ['  Vietnam'	,-0.806,0],
  ['Turkey',-0.8431,0],
@@ -234,7 +249,7 @@ google.charts.load('current', {'packages':['corechart']});
 [' 2558',45.88,48.99],
 [' 2559',50.37,52.78],
 [' 2560',58.63,60.65],
-[' 2561',43.58,45.47],
+[' 2561',43.58,45.47]
 
         ]);
 
