@@ -104,7 +104,7 @@ google.charts.load('current', {
  ['Malaysia'	,4886],
  ['Brazil'		,4291],
  ['Korea'	,3843],
- [' เยอรมัน'		,2363],
+ [' Germany'		,2363],
  ['  Vietnam'	,2159],
  [' Spain'	,1829],
   ['Turkey',1760],
@@ -147,7 +147,7 @@ google.charts.load('current', {
  ['Malaysia'	,-0.5138,0],
  ['Brazil'		,-0.5724,0],
  ['Korea'	,-0.6187,0],
- [' เยอรมัน'		,-0.7744,0],
+ [' Germany'		,-0.7744,0],
  ['  Vietnam'	,-0.806,0],
  ['Turkey',-0.8431,0],
  ['Italy'		,1308,0],
@@ -210,4 +210,61 @@ google.charts.load('current', {
       }
       </script>
  
+
+
+
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <div id="corlation_div" style="width: 900px; height: 500px;"></div>
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['ปี','ยางแผ่นดิบท้องถิ่น','ยางแผ่นดิบตลาดกลาง'],
+['2552',57.77,59.46 ],
+['2553',104.49,106.29],
+[ '2554',129.96,132.46],
+[' 2555',91.07,93.82],
+[' 2556',75.55,77.44],
+[' 2557',55.53,57.86],
+[' 2558',45.88,48.99],
+[' 2559',50.37,52.78],
+[' 2560',58.63,60.65],
+[' 2561',43.58,45.47],
+
+
+
+
+
+
+
+
+
+
+
+        ]);
+
+        var options = {
+          title: 'ราคายางเฉลี่ยรายปีของไทย ปี 2552 - 2561',
+          hAxis: {title: 'ปี', minValue: 100, maxValue:100},
+          vAxis: {title: 'ราคายาง', minValue: 100, maxValue: 100},
+          legend: 'none'
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('corlation_div'));
+
+        chart.draw(data, options);
+      }
+
+
+
+
+
+
+
+
+
+
+
 
