@@ -71,6 +71,110 @@ function drawBasic() {
         chart.draw(data, options);
       }
 </script>
-   
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <div id="regions_div" style="width: 900px; height: 500px;"></div>
+<script>
+google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
 
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Popularity'],
+          ['Amnat Charoen',118],
+['Ang Thong',171],
+['Phra Nakhon Si Ayutthaya',340],
+['Bangkok',20],
+['Bueng Kan',150],
+['Buri Ram',620],
+['Chachoengsao',323],
+['Chai Nat',161],
+['Chaiyaphum',152],
+['Chanthaburi',339],
+['Chiang Mai',1021],
+['Chiang Rai',594],
+['Chon Buri',828],
+['Chumphon',196],
+['Kalasin',352],
+['Kamphaeng Phet',246],
+['Kanchanaburi',328],
+['Khon Kaen',683],
+['Krabi',196],
+['Lampang',353],
+['Lamphun',197],
+['Loei',237],
+['Lop Buri',295],
+['Mae Hong Son',144],
+['Maha Sarakham',318],
+['Mukdahan',88],
+['Nakhon Nayok',119],
+['Nakhon Pathom',369],
+['Nakhon Phanom',215],
+['Nakhon Ratchasima',1110],
+['Nakhon Sawan',454],
+['Nakhon Si Thammarat',560],
+['Nan',200],
+['Narathiwat',141],
+['Nong Bua Lam Phu',229],
+['Nong Khai',201],
+['Nonthaburi',247],
+['Pathum Thani',19],
+['Pattani',101],
+['Phangnga',64],
+['Phatthalung',184],
+['Phayao',237],
+['Phetchabun',428],
+['Phetchaburi',303],
+['Phichit',224],
+['Phitsanulok',307],
+['Phrae',172],
+['Phuket',510],
+['Prachin Buri',218],
+['Prachuap Khiri Khan',357],
+['Ranong',88],
+['Ratchaburi',390],
+['Rayong',469],
+['Roi Et',526],
+['Sa Kaeo',218],
+['Sakon Nakhon',355],
+['Samut Prakan',365],
+['Samut Sakhon',298],
+['Samut Songkhram',88],
+['Saraburi',298],
+['Satun',86],
+['Si Sa Ket',481],
+['Sing Buri',91],
+['Songkhla',577],
+['Sukhothai',223],
+['Suphan Buri',381],
+['Surat Thani',642],
+['Surin',505],
+['Tak',206],
+['Trang',323],
+['Trat',156],
+['Ubon Ratchathani',118],
+['Udon Thani',486],
+['Uthai Thani',183],
+['Uttaradit',179],
+['Yala',104],
+['Yasothon',179]
+        ]);
+
+          var options = {
+        region: 'TH',
+        resolution:'provinces',
+        colorAxis:{colors: [ '#92AE85','#B1D4A1','#D1FABE','#ADAD84','#D3D4A1','#F9FABE'
+        
+        ]}
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+</script>
 
