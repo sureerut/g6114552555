@@ -162,8 +162,52 @@ google.charts.load('current', {
           seriesType: 'bars',
           series: {1: {type: 'line'}}
         };
-
+ 
         var chart = new google.visualization.ComboChart(document.getElementById('devichart_div'));
         chart.draw(data, options);
       }
      </script>
+
+
+
+
+
+
+
+
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <div id="histogram_div" style="width: 900px; height: 500px;"></div>
+<script type="text/javascript"> 
+ google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+           ['ปีพ.ศ.', 'ยางแผ่นดิบท้องถิ่น '],
+          ['2552', 57.77],
+          ['2553', 104.49],
+          ['2554', 129.96],
+          ['2555', 91.07],
+          ['2556',75.55],
+          ['2557', 	55.53],
+          ['2558', 45.88],
+          ['2559', 50.37],
+          ['2560',58.63],
+          ['2561', 	43.58],
+       ]);
+        var options = {
+          title: 'ราคายางแผ่นดิบท้องถิ่นเฉลี่ยรายปีของไทย ปี2552-2561',
+          legend: { position: 'none' },
+          hAxis: {
+          title: 'ราคายาง'
+         },
+        vAxis: {
+          title: 'ความถี่'
+        }
+        };
+
+        var chart = new google.visualization.Histogram(document.getElementById('histogram_div'));
+        chart.draw(data, options);
+      }
+      </script>
+ 
+
