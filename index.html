@@ -37,19 +37,21 @@ function drawBasic() {
         }
       };
  
- 
- 
- 
- 
- 
- 
-
       var chart = new google.visualization.ColumnChart(
         document.getElementById('chart_div'));
 
       chart.draw(data, options);
     }
     </script>
+
+
+
+
+
+
+
+
+
 
 <div id="piechart" style="width: 900px; height: 500px;"></div>
    <script> 
@@ -78,6 +80,13 @@ function drawBasic() {
         chart.draw(data, options);
       }
 </script>
+
+
+
+
+
+
+
 
 
 
@@ -128,16 +137,21 @@ google.charts.load('current', {
 
 
 
+
+
+
+
    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
        <div id="devichart_div" style="width: 900px; height: 500px;"></div>
 <script type="text/javascript"> 
-    google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawVisualization);
-
+ 
+ 
+ google.charts.load('current', {'packages':['corechart']});
+ google.charts.setOnLoadCallback(drawVisualization);
       function drawVisualization() {
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
-                       ['Country','2560','ref'],
+               ['Country','2560','ref'],
           ['  China',  245,0],
  ['India',39,0],
  ['America',8759,0],
@@ -162,26 +176,14 @@ google.charts.load('current', {
           seriesType: 'bars',
           series: {1: {type: 'line'}}
         };
- [' Germany'		,-0.7744,0],
- ['  Vietnam'	,-0.806,0],
- ['Turkey',-0.8431,0],
- ['Italy'		,1308,0],
- ['Sri Lanka'	,-0.8716,0],
-// ['ประเทศอื่น ๆ'	,-0.858,0],
-        ]);
-
-        var options = {
-          title : 'ปริมาณการใช้ยางของประเทศต่างๆ ปี2560'
-          vAxis: {title: 'area'},
-          hAxis: {title: 'provice'},
-          seriesType: 'bars',
-          series: {1: {type: 'line'}}
-        };
- 
         var chart = new google.visualization.ComboChart(document.getElementById('devichart_div'));
         chart.draw(data, options);
       }
-     </script>
+   
+
+
+
+
 
 
 
@@ -225,6 +227,10 @@ google.charts.load('current', {
       }
       </script>
  
+
+
+
+
 
 
 
