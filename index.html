@@ -36,6 +36,13 @@ function drawBasic() {
           title: 'ยางแผ่นดิบท้องดิบท้องถิ่น'
         }
       };
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
       var chart = new google.visualization.ColumnChart(
         document.getElementById('chart_div'));
@@ -71,6 +78,9 @@ function drawBasic() {
         chart.draw(data, options);
       }
 </script>
+
+
+
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
        <div id="regions_div" style="width: 900px; height: 500px;"></div>
 <script>
@@ -114,3 +124,44 @@ google.charts.load('current', {
       }
 </script>
 
+
+
+
+
+<script type="text/javascript"> 
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+               ['Country','พ.ศ.2560'],
+          ['  China',  3.8632],
+ ['India'		,0.0335],
+ ['America'		,-0.068],
+  ['Thailand'		,-0.3501],
+ [' Japan',-0.323],
+  ['Indonesia'	,-0.4167],
+ ['Malaysia'	,-0.5138],
+ ['Brazil'		,-0.5724],
+ ['Korea'	,-0.6187],
+ [' เยอรมัน'		,-0.7744],
+ ['  Vietnam'	,-0.806],
+ ['Turkey',-0.8431],
+ ['Italy'		,1308],
+ ['Sri Lanka'	,-0.8716],
+// ['ประเทศอื่น ๆ'	,-0.858],
+        ]);
+
+        var options = {
+          title : 'ปริมาณพื้นที่เพาะปลูกข้าวในภาคอีสานปี 2560',
+          vAxis: {title: 'area'},
+          hAxis: {title: 'provice'},
+          seriesType: 'bars',
+          series: {1: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('devichart_div'));
+        chart.draw(data, options);
+      }
+     </script>
